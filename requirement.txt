@@ -1,0 +1,7 @@
+streamlit
+panda
+numpy
+scikit-learn
+pickle
+python-dotenv
+ast

@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+from config import api_key
 
 # -------------------- LOAD DATA --------------------
 
@@ -15,7 +16,7 @@ if not isinstance(movies, pd.DataFrame):
 # -------------------- TMDB POSTER FUNCTION --------------------
 
 def fetch_poster(movie_id):
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=8265bd1679663a7ea12ac168da84d2e8"
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}"
     data = requests.get(url).json()
     poster_path = data.get('poster_path')
 
